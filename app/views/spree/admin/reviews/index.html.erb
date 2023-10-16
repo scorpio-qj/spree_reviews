@@ -15,14 +15,14 @@
         <div class="col-md-6">
           <div class="form-group">
             <%= label_tag :q_name_cont, Spree::Review.human_attribute_name(:user) %>
-            <%= f.text_field :name_cont, size: 25, class: 'form-control' %>
+            <%= f.text_field :name_cont, size: 25, class: 'form-control js-quick-search-target js-filterable' %>
           </div>
         </div>
 
         <div class="col-md-6">
           <div class="form-group">
             <%= label_tag :q_title_cont, Spree::Review.human_attribute_name(:title) %>
-            <%= f.text_field :title_cont, size: 25, class: 'form-control' %>
+            <%= f.text_field :title_cont, size: 25, class: 'form-control js-filterable' %>
           </div>
         </div>
       </div>
@@ -31,14 +31,14 @@
         <div class="col-md-6">
           <div class="form-group">
             <%= label_tag :q_review_cont, Spree::Review.human_attribute_name(:review) %>
-            <%= f.text_field :review_cont, size: 25, class: 'form-control' %>
+            <%= f.text_field :review_cont, size: 25, class: 'form-control js-filterable' %>
           </div>
         </div>
 
         <div class="col-md-6">
           <div class="form-group">
             <%= label_tag :q_approved_eq, Spree.t(:approval_status) %>
-            <%= f.select :approved_eq, [[Spree.t(:all), nil], [Spree.t(:approved_reviews), true], [Spree.t(:unapproved_reviews), false]], {}, class: 'select2' %>
+            <%= f.select :approved_eq, [[Spree.t(:all), nil], [Spree.t(:approved_reviews), true], [Spree.t(:unapproved_reviews), false]], {}, class: 'select2 js-filterable' %>
           </div>
         </div>
       </div>
