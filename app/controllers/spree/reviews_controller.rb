@@ -1,5 +1,5 @@
 module Spree
-  class ReviewsController < Spree::StoreController
+  class ReviewsController
     helper Spree::BaseHelper
     before_action :load_product, only: [:index, :new, :create]
     before_action :init_pagination, only: [:index]
